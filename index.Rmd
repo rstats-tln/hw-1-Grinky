@@ -11,24 +11,30 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 library(ggplot2)
+install.packages("tidyverse")
+library(tidyverse)
 ```
 
 By using *mpg* dataset:
 
 1. Map a continuous variable to color, size, and shape. How do these aesthetics behave differently for categorical vs. continuous variables?
+Error: A continuous variable can not be mapped to shape
 
 - Color
 ```{r}
-
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = 0, color = displ))
 ```
 
 - Size
 ```{r}
-
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = 0, size = displ))
 ```
 
 - Shape
 ```{r}
+
 
 ```
 
@@ -36,18 +42,22 @@ By using *mpg* dataset:
 2. What happens if you map the same variable to multiple aesthetics?
 
 ```{r}
-
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = 0, colour = displ, size = displ))
 ```
 
 
 3. What does the stroke aesthetic do? What shapes does it work with? (Hint: use ?geom_point)
 
 ```{r}
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = 0), shape = 21, colour = "black", stroke = 5)
 
 ```
 
 4. What happens if you map an aesthetic to something other than a variable name, like aes(colour = displ < 5)?
 
 ```{r}
-
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = 0, colour = displ < 5, size = displ))
 ```
