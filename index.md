@@ -15,14 +15,14 @@ install.packages("tidyverse")
 library(tidyverse)
 ```
 
-    ## ── Attaching packages ──────────────────────────────────── tidyverse 1.2.1 ──
+    ## ── Attaching packages ───────────────────────────────────────────────────── tidyverse 1.2.1 ──
 
     ## ✔ tibble  2.0.1       ✔ purrr   0.3.1  
     ## ✔ tidyr   0.8.3       ✔ dplyr   0.8.0.1
     ## ✔ readr   1.3.1       ✔ stringr 1.4.0  
     ## ✔ tibble  2.0.1       ✔ forcats 0.4.0
 
-    ## ── Conflicts ─────────────────────────────────────── tidyverse_conflicts() ──
+    ## ── Conflicts ──────────────────────────────────────────────────────── tidyverse_conflicts() ──
     ## ✖ dplyr::filter() masks stats::filter()
     ## ✖ dplyr::lag()    masks stats::lag()
 
